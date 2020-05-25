@@ -10,7 +10,5 @@ RUN apt update && \
     apt update && \
     apt install -y libmariadb-dev
 
-USER $NB_UID
-
 # Install Python 3 packages
-RUN conda install --quiet --yes 'mariadb'
+RUN pip install mariadb
