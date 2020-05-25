@@ -9,4 +9,8 @@ RUN apt update && \
     curl -LsS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash && \
     apt update && \
     apt install -y libmariadb-dev \
-    python3 -m pip install mariadb
+
+    USER $NB_UID
+
+# Install Python 3 packages
+RUN conda install --quiet --yes 'mariadb'
