@@ -10,5 +10,7 @@ RUN apt update && \
     apt update && \
     apt install -y libmariadb-dev
 
+USER $NB_UID
+
 # Install Python 3 packages
-RUN pip install mariadb
+RUN pip install mariadb wikipedia
