@@ -13,4 +13,4 @@ RUN apt update && \
 USER $NB_UID
 
 # Install Python 3 packages
-RUN pip install mariadb wikipedia scrapy
+RUN pip install mariadb wikipedia beautifulsoup4 scrapy google-cloud-bigquery
