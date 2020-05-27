@@ -1,1 +1,1 @@
-# mariadb-scipy-notebook
+# datasci-docker-notebook
