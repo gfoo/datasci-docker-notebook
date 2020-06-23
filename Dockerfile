@@ -24,4 +24,4 @@ RUN  wget -O ~/FirefoxSetup.tar.bz2 "https://download.mozilla.org/?product=firef
 ADD webdrivers /
 
 # Install Python 3 packages
-RUN pip install mariadb wikipedia beautifulsoup4 scrapy google-cloud-bigquery mysql.connector nltk selenium
+RUN pip install mariadb wikipedia beautifulsoup4 scrapy google-cloud-bigquery mysql.connector nltk selenium import_ipynb
