@@ -10,7 +10,16 @@ RUN apt update && \
     apt update && \
     apt install -y libmariadb-dev
 
-#USER $NB_UID
+# Install Chrome
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
+    dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
+
+# install firefox
+RUN  wget -O ~/FirefoxSetup.tar.bz2 "https://download.mozilla.org/?product=firefox-latest&os=linux64" && \
+    tar xjf ~/FirefoxSetup.tar.bz2 -C /opt/
+
+# add webdrivers folder
+ADD webdrivers /
 
 # Install Python 3 packages
 RUN pip install mariadb wikipedia beautifulsoup4 scrapy google-cloud-bigquery mysql.connector nltk selenium
